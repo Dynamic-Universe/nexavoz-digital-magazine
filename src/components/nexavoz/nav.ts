@@ -1,0 +1,16 @@
+export const mainNav = [
+  { to: "/noticias", label: "Noticias" },
+  { to: "/articulos", label: "Artículos" },
+  { to: "/reportajes", label: "Reportajes" },
+  { to: "/entrevistas", label: "Entrevistas" },
+  { to: "/musica-ia", label: "Música & IA" },
+  { to: "/daw-tecnologia", label: "DAW & Tecnología" },
+  { to: "/artistas", label: "Artistas" },
+  { to: "/critica", label: "Crítica & Reseñas" },
+  { to: "/ia-derechos", label: "IA & Derechos" },
+  { to: "/lab", label: "NEXAVOZ LAB" },
+  { to: "/cartas", label: "Cartas al Director" },
+  { to: "/agenda", label: "Agenda" },
+  { to: "/herramientas", label: "Herramientas" },
+  { to: "/contacto", label: "Contacto" },
+] as const;
