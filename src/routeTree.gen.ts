@@ -10,33 +10,167 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ArticulosRouteImport } from './routes/articulos'
+import { Route as CartasRouteImport } from './routes/cartas'
+import { Route as CriticaRouteImport } from './routes/critica'
+import { Route as DawTecnologiaRouteImport } from './routes/daw-tecnologia'
+import { Route as EntrevistasRouteImport } from './routes/entrevistas'
+import { Route as IaDerechosRouteImport } from './routes/ia-derechos'
+import { Route as LabRouteImport } from './routes/lab'
+import { Route as MusicaIaRouteImport } from './routes/musica-ia'
+import { Route as NoticiasRouteImport } from './routes/noticias'
+import { Route as ReportajesRouteImport } from './routes/reportajes'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ArticulosRoute = ArticulosRouteImport.update({
+  id: '/articulos',
+  path: '/articulos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CartasRoute = CartasRouteImport.update({
+  id: '/cartas',
+  path: '/cartas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CriticaRoute = CriticaRouteImport.update({
+  id: '/critica',
+  path: '/critica',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DawTecnologiaRoute = DawTecnologiaRouteImport.update({
+  id: '/daw-tecnologia',
+  path: '/daw-tecnologia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EntrevistasRoute = EntrevistasRouteImport.update({
+  id: '/entrevistas',
+  path: '/entrevistas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IaDerechosRoute = IaDerechosRouteImport.update({
+  id: '/ia-derechos',
+  path: '/ia-derechos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LabRoute = LabRouteImport.update({
+  id: '/lab',
+  path: '/lab',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MusicaIaRoute = MusicaIaRouteImport.update({
+  id: '/musica-ia',
+  path: '/musica-ia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NoticiasRoute = NoticiasRouteImport.update({
+  id: '/noticias',
+  path: '/noticias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReportajesRoute = ReportajesRouteImport.update({
+  id: '/reportajes',
+  path: '/reportajes',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/articulos': typeof ArticulosRoute
+  '/cartas': typeof CartasRoute
+  '/critica': typeof CriticaRoute
+  '/daw-tecnologia': typeof DawTecnologiaRoute
+  '/entrevistas': typeof EntrevistasRoute
+  '/ia-derechos': typeof IaDerechosRoute
+  '/lab': typeof LabRoute
+  '/musica-ia': typeof MusicaIaRoute
+  '/noticias': typeof NoticiasRoute
+  '/reportajes': typeof ReportajesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/articulos': typeof ArticulosRoute
+  '/cartas': typeof CartasRoute
+  '/critica': typeof CriticaRoute
+  '/daw-tecnologia': typeof DawTecnologiaRoute
+  '/entrevistas': typeof EntrevistasRoute
+  '/ia-derechos': typeof IaDerechosRoute
+  '/lab': typeof LabRoute
+  '/musica-ia': typeof MusicaIaRoute
+  '/noticias': typeof NoticiasRoute
+  '/reportajes': typeof ReportajesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/articulos': typeof ArticulosRoute
+  '/cartas': typeof CartasRoute
+  '/critica': typeof CriticaRoute
+  '/daw-tecnologia': typeof DawTecnologiaRoute
+  '/entrevistas': typeof EntrevistasRoute
+  '/ia-derechos': typeof IaDerechosRoute
+  '/lab': typeof LabRoute
+  '/musica-ia': typeof MusicaIaRoute
+  '/noticias': typeof NoticiasRoute
+  '/reportajes': typeof ReportajesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/articulos'
+    | '/cartas'
+    | '/critica'
+    | '/daw-tecnologia'
+    | '/entrevistas'
+    | '/ia-derechos'
+    | '/lab'
+    | '/musica-ia'
+    | '/noticias'
+    | '/reportajes'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/articulos'
+    | '/cartas'
+    | '/critica'
+    | '/daw-tecnologia'
+    | '/entrevistas'
+    | '/ia-derechos'
+    | '/lab'
+    | '/musica-ia'
+    | '/noticias'
+    | '/reportajes'
+  id:
+    | '__root__'
+    | '/'
+    | '/articulos'
+    | '/cartas'
+    | '/critica'
+    | '/daw-tecnologia'
+    | '/entrevistas'
+    | '/ia-derechos'
+    | '/lab'
+    | '/musica-ia'
+    | '/noticias'
+    | '/reportajes'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ArticulosRoute: typeof ArticulosRoute
+  CartasRoute: typeof CartasRoute
+  CriticaRoute: typeof CriticaRoute
+  DawTecnologiaRoute: typeof DawTecnologiaRoute
+  EntrevistasRoute: typeof EntrevistasRoute
+  IaDerechosRoute: typeof IaDerechosRoute
+  LabRoute: typeof LabRoute
+  MusicaIaRoute: typeof MusicaIaRoute
+  NoticiasRoute: typeof NoticiasRoute
+  ReportajesRoute: typeof ReportajesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +182,91 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/articulos': {
+      id: '/articulos'
+      path: '/articulos'
+      fullPath: '/articulos'
+      preLoaderRoute: typeof ArticulosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cartas': {
+      id: '/cartas'
+      path: '/cartas'
+      fullPath: '/cartas'
+      preLoaderRoute: typeof CartasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/critica': {
+      id: '/critica'
+      path: '/critica'
+      fullPath: '/critica'
+      preLoaderRoute: typeof CriticaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/daw-tecnologia': {
+      id: '/daw-tecnologia'
+      path: '/daw-tecnologia'
+      fullPath: '/daw-tecnologia'
+      preLoaderRoute: typeof DawTecnologiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/entrevistas': {
+      id: '/entrevistas'
+      path: '/entrevistas'
+      fullPath: '/entrevistas'
+      preLoaderRoute: typeof EntrevistasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ia-derechos': {
+      id: '/ia-derechos'
+      path: '/ia-derechos'
+      fullPath: '/ia-derechos'
+      preLoaderRoute: typeof IaDerechosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lab': {
+      id: '/lab'
+      path: '/lab'
+      fullPath: '/lab'
+      preLoaderRoute: typeof LabRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/musica-ia': {
+      id: '/musica-ia'
+      path: '/musica-ia'
+      fullPath: '/musica-ia'
+      preLoaderRoute: typeof MusicaIaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/noticias': {
+      id: '/noticias'
+      path: '/noticias'
+      fullPath: '/noticias'
+      preLoaderRoute: typeof NoticiasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reportajes': {
+      id: '/reportajes'
+      path: '/reportajes'
+      fullPath: '/reportajes'
+      preLoaderRoute: typeof ReportajesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ArticulosRoute: ArticulosRoute,
+  CartasRoute: CartasRoute,
+  CriticaRoute: CriticaRoute,
+  DawTecnologiaRoute: DawTecnologiaRoute,
+  EntrevistasRoute: EntrevistasRoute,
+  IaDerechosRoute: IaDerechosRoute,
+  LabRoute: LabRoute,
+  MusicaIaRoute: MusicaIaRoute,
+  NoticiasRoute: NoticiasRoute,
+  ReportajesRoute: ReportajesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
