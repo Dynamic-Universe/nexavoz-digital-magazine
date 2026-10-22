@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, seo } from "@/components/nexavoz/CategoryPage";
 import { DemoBadge } from "@/components/nexavoz/Brand";
 import { ArticleCard } from "@/components/nexavoz/ArticleCard";
+import { EresArtista } from "@/components/nexavoz/EresArtista";
 import { getArticlesByCategory, getArtists } from "@/content/repository";
 
 export const Route = createFileRoute("/artistas")({
@@ -32,6 +33,7 @@ function Page() {
           {interviews.map((a) => <ArticleCard key={a.slug} article={a} />)}
         </div>
       )}
+      <EresArtista />
     </>
   );
 }
