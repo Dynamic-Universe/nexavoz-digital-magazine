@@ -22,6 +22,7 @@ export const Route = createFileRoute("/")({
 
 function Home() {
   const f = getFeatured();
+  if (!f) return null;
   const latest = getArticles().filter((a) => a.slug !== f.slug).slice(0, 6);
   const news = getArticlesByCategory("noticias", 2);
   const mia = getArticlesByCategory("musica-ia", 2);
