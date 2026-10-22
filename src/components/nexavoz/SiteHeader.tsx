@@ -87,6 +87,6 @@ export function SiteHeader() {
           </form>
         </div>
       )}
-    </header>
+    </>
   );
 }
