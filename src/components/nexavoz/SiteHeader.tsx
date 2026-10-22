@@ -25,6 +25,14 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 glass border-x-0 border-t-0">
+      {/* Editorial top strip: edition line */}
+      <div className="border-b">
+        <div className="container-mag flex h-8 items-center justify-between text-[0.6rem] uppercase tracking-[0.22em] text-muted-foreground">
+          <span>Nº 01 · Octubre 2026</span>
+          <span className="hidden sm:inline">Revista digital de música & IA</span>
+          <span className="text-brand font-semibold">IA + HUMANO</span>
+        </div>
+      </div>
       <div className="container-mag flex h-16 items-center justify-between gap-4 md:h-20">
         <BrandLogo />
         <nav aria-label="Principal" className="hidden items-center gap-1 xl:flex">
