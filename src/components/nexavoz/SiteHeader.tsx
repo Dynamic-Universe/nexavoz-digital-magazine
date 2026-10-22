@@ -24,6 +24,7 @@ export function SiteHeader() {
   const primary = mainNav.slice(0, 7);
 
   return (
+    <>
     <header className="sticky top-0 z-40 glass border-x-0 border-t-0">
       {/* Editorial top strip: edition line */}
       <div className="border-b">
@@ -52,6 +53,7 @@ export function SiteHeader() {
         </div>
       </div>
       <div className="rule-brand opacity-60" />
+    </header>
 
       {menu && (
         <div className="fixed inset-0 z-50 overflow-y-auto bg-background/95 backdrop-blur-xl animate-in fade-in" role="dialog" aria-modal="true" aria-label="Menú">
